@@ -8,36 +8,36 @@
 == Structure des données
 
 === agency.txt
-Information sur le service de transport.<br/>
-PK : agency_id<br/>
-FK : .<br/>
+Information sur le service de transport.  
+PK : agency_id  
+FK : .  
 
 === calendar.txt
-Début et fin de chaque période de service.<br/>
-PK : service_id (?)<br/>
-FK : .<br/>
+Début et fin de chaque période de service.  
+PK : service_id (?)  
+FK : .  
 
 === routes.txt
-Numéro, nom, et direction de chaque routes.<br/>
-PK : route_id<br/>
-FK : .<br/>
+Numéro, nom, et direction de chaque routes.  
+PK : route_id  
+FK : .  
 
 === trips.txt
-Associe une course à une route et à un service.<br/>
-PK : trip_id<br/>
-FK : route_id, service_id<br/>
+Associe une course à une route et à un service.  
+PK : trip_id  
+FK : route_id, service_id  
 
 === stops.txt
-Code, nom, adresse, longitude et latitude des arrêts.<br/>
-PK : stop_id<br/>
-FK : .<br/>
+Code, nom, adresse, longitude et latitude des arrêts.  
+PK : stop_id  
+FK : .  
 
 === stop_times.txt
-Horaire d'arrivée et de départ pour chaque course.<br/>
-PK : .<br/>
-FK : trip_id, stop_id<br/>
+Horaire d'arrivée et de départ pour chaque course.  
+PK : .  
+FK : trip_id, stop_id  
 
 === transfers.txt
-Correspondances et temps de correspondance.<br/>
-PK : .<br/>
-FK : from_stop_id, to_stop_id<br/>
+Correspondances et temps de correspondance.  
+PK : .  
+FK : from_stop_id, to_stop_id  
