@@ -1,28 +1,43 @@
-== README
+== RatpDataDisplayer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Détails techniques
+Ruby : v2.2.0
+Rails : v4.2.6
+Database : pgsql
 
-Things you may want to cover:
+# Structure des données
 
-* Ruby version
+## agency.txt
+Information sur le service de transport.
+PK : agency_id
+FK : .
 
-* System dependencies
+## calendar.txt
+Début et fin de chaque période de service.
+PK : service_id (?)
+FK : .
 
-* Configuration
+## routes.txt
+Numéro, nom, et direction de chaque routes.
+PK : route_id
+FK : .
 
-* Database creation
+## trips.txt
+Associe une course à une route et à un service.
+PK : trip_id
+FK : route_id, service_id
 
-* Database initialization
+## stops.txt
+Code, nom, adresse, longitude et latitude des arrêts.
+PK : stop_id
+FK : .
 
-* How to run the test suite
+## stop_times.txt
+Horaire d'arrivée et de départ pour chaque course.
+PK : .
+FK : trip_id, stop_id
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## transfers.txt
+Correspondances et temps de correspondance.
+PK : .
+FK : from_stop_id, to_stop_id
